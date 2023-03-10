@@ -1,0 +1,112 @@
+.full__container{
+    padding-left: 20px;
+    background-color: black;
+    color: white;
+}
+
+.header__container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 5vh;
+    padding: 20px 20px 90px 0;
+    font-size: 18px;
+}
+
+.hamburger__menu__logo{
+    width: 100%;
+    height: 100%;
+}
+
+.main__container{
+    padding-right: 20px;
+}
+
+.main__container h1{
+    color: white;
+    font-size: 39px;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.main__container p{
+    color: gray;
+    font-size: 18px;
+    text-align:left;
+    line-height: 25px;
+    padding-bottom: 80px;
+}
+
+
+.logo__container{
+    display: grid;
+    grid-template-areas: 
+    "walmart jpmorgan"
+    "visa    tinder"
+    "samsung verizon"
+    ;
+    justify-content: center;
+    gap: 20px;
+    padding-right:20px;
+}
+
+.logo__walmart{
+    grid-area: walmart;
+    justify-self: flex-end;
+    
+}
+
+.logo__jpmorgan{
+    grid-area: jpmorgan;
+}
+
+.logo__visa{
+    grid-area: visa;
+    justify-self:flex-end;
+    width: 40%;
+}
+
+.logo__tinder{
+    grid-area: tinder;
+    
+}
+
+.logo__samsung{
+    grid-area: samsung;
+    justify-self: flex-end;
+    width: 90%;
+    padding-top: 5px;
+}
+
+.logo__verizon{
+    grid-area: verizon;
+    justify-self: flex-end;
+}
+
+.spense__container__image{
+    display: flex;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+}
+
+.spense__container__image img{
+    width: 90%;
+    padding-bottom: 20px;
+    margin-left: 8px;
+}
+
+.spense__container h2{
+    font-size: 39px;
+    padding-bottom: 15px;
+}
+
+.spense__container p{
+    font-size: 19.5px;
+    line-height: 25px;
+    color: gray;
+    text-align:left;
+}
+
+
