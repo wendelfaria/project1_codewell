@@ -30,18 +30,18 @@
     height: 100%;
 }
 
-.main__container{
+.main__text__container{
     padding: var(--padding-header);
 }
 
-.main__container h1{
+.main__text__container h1{
     color: white;
     font-size: 35px;
     text-align: left;
     padding-bottom: 20px;
-}
 
-.main__container p{
+}
+.main__text__container p{
     font-size: var(--font-size-default-text);
     color: var(--font-color-text);
     text-align:left;
@@ -194,6 +194,7 @@
     justify-content: space-around;
     align-items: center;
     height: 8vh;
+    gap: 70px;
 }
 
 .social__container{
