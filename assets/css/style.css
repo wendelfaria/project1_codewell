@@ -1,21 +1,23 @@
 :root{
     --padding-default: 0 20px 0 20px;
+    --padding-header-tablet: 20px 40px 0 40px;
+    --padding-default-tablet: 0 25px 0 25px;
     --padding-header: 20px 20px 0 20px;
     --font-size-default--title: 32px;
     --font-size-default-text: 16px;
     --font-color-text: darkgray;
-    --font-size-default--name: 20px;
+    --font-size-default--name: 16px;
+    --background-color: black;
+    --font-color-default: white;
     --secundary-bg-color: #404040;
+    --font-default: 'Inter', sans-serif;
+    --font-logo: 'Josefin Sans', sans-serif;
+    --max-width-default: 1300px;
 }
 
-.full__container{
-    background-color: black;
-    color: white;
-    font-family: 'Inter', sans-serif;
-}
 
-.header__container{
-    font-family: 'Josefin Sans', sans-serif;
+.header__container__full{
+    font-family: var(--font-logo);
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -23,6 +25,12 @@
     padding: var(--padding-header);
     padding-bottom: 50px;
     font-size: var(--font-size-default--name);
+    background-color: var(--background-color);
+    color: var(--font-color-default);
+}
+
+.header__menu, .button__header{
+    display: none;
 }
 
 .hamburger__menu__logo{
@@ -30,6 +38,9 @@
     height: 100%;
 }
 
+.main__container{
+    background-color: var(--background-color);
+}
 .main__text__container{
     padding: var(--padding-header);
 }
@@ -95,15 +106,15 @@
     justify-self: flex-end;
 }
 
-.projects__container{
-    padding: var(--padding-header);
+.projects__container__full{
+    padding: var(--padding-default);
 }
-.projects__container h2{
+.projects__container__full h2{
     font-size: 39px;
     padding-bottom: 15px;
 }
 
-.projects__container p{
+.projects__container__full p{
     font-size: var(--font-size-default-text);
     color: var(--font-color-text);
     line-height: 25px;
@@ -111,8 +122,8 @@
     letter-spacing: 0.5px;
 }
 
-.projects__container p:last-child{
-    padding-bottom: 70px;
+.projects__container__full p:last-child{
+    padding-bottom: 10px;
 }
 
 .spense__container__image, .yelpcamp__container__image{
@@ -120,7 +131,7 @@
     align-content: center;
     width: 100%;
     height: 100%;
-    padding-top: 80px;
+    padding-top: 40px;
 }
 
 .spense__container__image img, .yelpcamp__container__image img{
@@ -128,58 +139,59 @@
     padding-bottom: 20px;
 }
 
-.experience__container{
+.experience__container__full{
     background-color: var(--secundary-bg-color);
     padding: var(--padding-header);
 }
 
-.experience__container h2{
+.experience__container__full h2{
     font-size: var(--font-size-default--title);
     padding: 40px 0 10px 0;
 }
 
-.experience__container p{
+.experience__container__full p{
     font-size: var(--font-size-default-text);
     color: var(--font-color-text);
     line-height: 25px;
 }
 
-.experience__container p:last-child{
+.experience__container__full p:last-child{
    padding-bottom: 50px;
 }
 
-.experience__container b{
+.experience__container__full b{
     font-weight: bolder;
 }
 
-.experience__container i{
+.experience__container__full i{
     font-style: italic;
 }
 
 
-.contact__container{
+.contact__container__full{
     padding: var(--padding-default);
 }
 
 
-.contact__container h2{
+.contact__container__full h2{
     font-size: var(--font-size-default--title);
     padding: 60px 0 10px 0;
     line-height: 40px;
+    color: var(--font-color-default);
 }
 
-.contact__container p{
+.contact__container__full p{
     font-size: var(--font-size-default-text);
     color: var(--font-color-text);
     line-height: 25px;
+    padding-top: 30px;
 
 }
 
-.contact__container button{
+.button__touch{
     background-color: #FFFF66;
     padding: 14px 24px 14px;
     border-style: none;
-    margin: 18px 0 50px;
     font-size: 14px;
     font-weight: bolder;
     color: rgba(0, 0, 0, 0.8);
@@ -190,8 +202,9 @@
     background-color: var(--secundary-bg-color);
     color: var(--font-color-text);
     font-size: var(--font-size-default--name);
+    font-family: var(--font-logo);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 8vh;
     gap: 70px;
@@ -202,4 +215,131 @@
     gap: 10px;
 }
 
+@media screen and (min-width: 550px){
 
+    .header__container__full{
+        padding: var(--padding-header-tablet);
+    }
+
+    .main__container__full{
+        padding: var(--padding-default-tablet);
+    }
+    
+   .main__text__container h1{
+        font-size: 3.5rem;
+    }
+    
+    .logo__container{
+        display: grid;
+        grid-template-areas: 
+        "walmart jpmorgan visa"
+        "tinder    samsung verizon"
+        ;
+        justify-content: center;
+        gap: 20px;
+        padding-right: 20px;
+    }
+    
+    .logo__walmart{
+        grid-area: walmart;
+        
+    }
+    
+    .logo__jpmorgan{
+        grid-area: jpmorgan;
+    }
+    
+    .logo__visa{
+        grid-area: visa;
+        width: 50%;
+        justify-self: flex-start;
+    }
+    
+    .logo__tinder{
+        grid-area: tinder;
+        width: 80%;
+        justify-self: flex-start;  
+    }
+    
+    .logo__samsung{
+        grid-area: samsung;
+        justify-self: flex-start;
+        width: 90%;
+        padding-top: 5px;
+    }
+    
+    .logo__verizon{
+        grid-area: verizon;
+    }
+
+    
+    .projects__container__full{
+        padding: 0 35px;
+    }
+
+    .experience__container__full{
+        padding: 0 35px;
+    }
+
+    .contact__container__full{
+        padding: 0 35px;
+    }
+
+    .footer__container{
+        padding: 0 35px;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    
+    .header__container__full{
+        padding: 45px 80px 45px 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .header__menu, .button__touch{
+        display: flex;
+    }
+
+    .header__menu ul{
+        display: flex;
+        gap: 15px;
+    }
+
+    .hamburger__logo__container{
+        display: none;
+        position: relative; 
+        
+    }
+
+    .main__container__full{
+        padding: 0 80px;
+    }
+
+    
+    .main__text__container{
+        padding: 0;
+    }
+
+
+    .projects__container__full{
+        padding: 0 80px;
+    }
+
+    .experience__container__full{
+        padding: 0 80px;
+    }
+    
+
+    .contact__container__full{
+        padding: 0 80px 60px 80px;
+    }
+
+    .contact__container__full p{
+        padding-bottom: 20px;
+    }
+    .footer__container{
+        padding: 0 80px;
+    }
+}
